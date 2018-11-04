@@ -42,6 +42,7 @@ for dirpath, dirnames, files in os.walk(sourceFolder):
                         else:
                             dbx.files_upload_session_append_v2(f.read(chunk_size), cursor)
                             cursor.offset = f.tell()
+            os.unlink(file_path)
             f.close()
         except Exception as err:
                 print("Failed to upload %s\n%s" % (file, err))
