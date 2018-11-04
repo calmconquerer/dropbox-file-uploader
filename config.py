@@ -1,4 +1,4 @@
-exports = {'sourceFolder': '/Users/Sam/Desktop/source/',
-           'targetFolder': '/target',
-           'token': 'WsjCWzEV2oAAAAAAAAAApFYuY8LytRteTWSPNDqM_1aIGEMPUOYvmvD2pqc01rHx',
+exports = {'sourceFolder': 'enter the source folder address',
+           'targetFolder': 'enter the folder address created in dropbox',
+           'token': 'enter token',
            'chunkSize': 1}
