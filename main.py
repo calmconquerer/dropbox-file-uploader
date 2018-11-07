@@ -12,9 +12,9 @@ targetFolder = config.exports['targetFolder']
 
 
 chunk_size = config.exports['chunkSize'] * 1024 * 1024
+max_chunk_size = 2 * 1024 * 1024
 
 
-# walk return first the current folder that it walk, then tuples of dirs and files not "subdir, dirs, files"
 for dirpath, dirnames, files in os.walk(sourceFolder):
     for file in files:
         try:
@@ -25,7 +25,7 @@ for dirpath, dirnames, files in os.walk(sourceFolder):
                 # if file == '.DS_Store':
                 #     pass
                 fileSize = os.path.getsize(file_path)
-                if fileSize <= chunk_size:
+                if fileSize <= max_chunk_size:
                     if file == '.DS_Store':
                         pass
                     else:
